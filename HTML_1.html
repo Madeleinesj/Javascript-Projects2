@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>What is your favorite color?</h1>
+        <h3>Pick your favorite color from the list:</h3>
+        <ul>
+            <li>Red</li>
+            <li>Yellow</li>
+            <li>Green</li>
+            <li>Blue</li>
+            <li>Pink</li>
+            <li>Purple</li>
+        </ul>
+        <h3>Enter your choice below:</h3>
+
+        <input id="Color_Input" type="text">
+        <button onclick="Color_Function()">Submit Color</button>
+        <p id="Output"></p>
+        <script src="Javascript/JavaScript_1.js"></script>
+        <!--get element by class name-->
+        <h1 class="Click">This text will change!</h1>
+        <h3 class="Click">This text will not change!</h3>
+        <button onclick="Hello()">Click me.</button>
+        <!--Canvas element - would only read getcontext if used in html and not js page-->
+        <canvas id="myCanvas" width="500" height="250" style="border:5px solid purple;"></canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+ctx.font = "200px Arial bold purple";
+ctx.strokeText("Hello",15,150);
+var grd = ctx.createLinearGradient(0, 100, 170, 0);
+grd.addColorStop(0, "pink");
+grd.addColorStop(1, "white");
+ctx.fillStyle = grd;
+ctx.fillRect(0, 152, 1500, 100);
+        </script>
+
+    </body>
+</html>
